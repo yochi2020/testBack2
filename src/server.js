@@ -10,7 +10,7 @@ dotenv.config({ path: ".env.development" });
 const app = express();
 
 app.use(cors({
-    origin: String(process.env.CLIENT_URL),
+    origin: "*",
     credentials: true       //cliend can use automate cookie
 }));
 app.use(morgan("dev"));
